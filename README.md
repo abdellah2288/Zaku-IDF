@@ -1,6 +1,7 @@
 # Zaku-IDF
 
-![Zaku Robot](zaku_image.jpg)
+![zaku_full](https://github.com/abdellah2288/Zaku-IDF/assets/123770144/b32b2fd6-9b8b-4265-af77-5711634f8e1f)
+
 
 ## Introduction
 
