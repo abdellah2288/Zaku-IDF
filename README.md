@@ -1,32 +1,45 @@
-# _Sample project_
+# Zaku-IDF
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+![Zaku Robot](zaku_image.jpg)
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+## Introduction
 
+Zaku-IDF is a firmware application developed for controlling and monitoring a robotic system using the ESP32 microcontroller and Espressif IoT Development Framework (ESP-IDF). The firmware enables seamless integration with various sensors and actuators, facilitating real-time data acquisition, processing, and control operations.
 
+## Features
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+- **Sensor Integration**: Interfacing with environmental sensors (e.g., DHT11), ultrasonic distance sensors, and infrared sensors for collecting crucial data about the robot's surroundings.
+- **MQTT Communication**: Establishing communication with MQTT broker for publishing sensor data and subscribing to control commands, enabling seamless integration with IoT systems.
+- **Motor Control**: Implementing PID controller for precise motor speed control based on sensor feedback, enhancing the robot's maneuverability and responsiveness.
+- **Data Logging**: Logging sensor data to CSV files for further analysis, documentation, and visualization, facilitating comprehensive understanding and optimization of robot performance.
 
-## Example folder contents
+## Usage
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+1. **Hardware Setup**: Connect the required sensors and actuators to the ESP32 microcontroller according to the pin configurations specified in the code.
+2. **Software Configuration**: Customize MQTT broker settings, Wi-Fi credentials, and sensor parameters as needed for your application.
+3. **Build and Flash**: Compile the firmware using ESP-IDF toolchain and flash it to the ESP32 device.
+4. **Monitor Operation**: Monitor the operation of the robot through MQTT messages or by accessing the generated CSV files containing sensor data.
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+## Getting Started
 
-Below is short explanation of remaining files in the project folder.
+To get started with Zaku-IDF, follow these steps:
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+1. Clone the repository: `git clone https://github.com/your-username/Zaku-IDF.git`
+2. Navigate to the project directory: `cd Zaku-IDF`
+3. Customize the configuration parameters in the code according to your hardware setup and application requirements.
+4. Build the firmware: `idf.py build`
+5. Flash the firmware to your ESP32 device: `idf.py -p PORT flash`
+
+## Contributing
+
+Contributions to Zaku-IDF are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Please adhere to the project's coding standards and guidelines.
+
+## License
+
+Zaku-IDF is licensed under the [MIT License](LICENSE), allowing for both personal and commercial use with proper attribution. See the LICENSE file for more details.
+
+## Acknowledgements
+
+- [Espressif Systems](https://www.espressif.com/): For developing the ESP32 microcontroller and ESP-IDF framework.
+- [Open-source Community](https://github.com/): For contributing valuable libraries, tools, and resources to the development ecosystem.
+
